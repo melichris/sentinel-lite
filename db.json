@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Meli",
+      "email": "meli@example.com",
+      "password": "password123"
+    },
+    {
+      "name": "brice",
+      "email": "brice@gmail.com",
+      "password": "brice123",
+      "id": 2
+    }
+  ],
+  "alerts": [
+    {
+      "id": 1,
+      "title": "Unauthorized login attempt",
+      "severity": "high",
+      "createdAt": "2026-06-20T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "title": "Firewall rule updated",
+      "severity": "low",
+      "createdAt": "2026-06-21T08:30:00Z"
+    }
+  ],
+  "devices": [
+    {
+      "id": 1,
+      "name": "Office Router",
+      "type": "router",
+      "status": "online"
+    },
+    {
+      "id": 2,
+      "name": "CCTV Cam 1",
+      "type": "camera",
+      "status": "offline"
+    }
+  ]
+}
