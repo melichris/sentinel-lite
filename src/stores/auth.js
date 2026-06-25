@@ -41,6 +41,12 @@ export const useAuthStore = defineStore('auth', () => {
     setSession(response.data, fakeToken)
     return response.data
   }
+  async function updateProfile(updates) {
+  const response = await api.put(`/users/${user.value.id}`, { ...user.value, ...updates })
+  user.value = response.data
+  localStorage.setItem('sentinel_user', JSON.stringify(response.data))
+  return response.data
+}
 
   function logout() {
     user.value = null
@@ -54,5 +60,4 @@ export const useAuthStore = defineStore('auth', () => {
     if (savedUser) user.value = JSON.parse(savedUser)
   }
 
-  return { user, token, isAuthenticated, login, register, logout, restoreSession }
-})
+return { user, token, isAuthenticated, login, register, logout, restoreSession, updateProfile }})

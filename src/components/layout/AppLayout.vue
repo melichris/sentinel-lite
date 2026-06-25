@@ -11,7 +11,8 @@ function toggleSidebar() {
 </script>
 
 <template>
-  <div class="min-h-screen bg-slate-900 flex">
+  <!-- <div class="min-h-screen bg-slate-900 flex"> -->
+  <div class="min-h-screen bg-slate-50 dark:bg-slate-900 flex">
     <Sidebar :collapsed="isSidebarCollapsed" @toggle-collapse="toggleSidebar" />
 
     <div class="flex-1 flex flex-col">
