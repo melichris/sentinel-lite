@@ -37,3 +37,9 @@ npm run dev
 npm run build
 ```
 # sentinel-lite
+## 📸 Screenshots
+
+![Login](./screenshots/login.png)
+![Dashboard](./screenshots/dashbord.png)
+![Alerts](./screenshots/Alerts.png)
+
