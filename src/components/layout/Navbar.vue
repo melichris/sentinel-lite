@@ -23,8 +23,8 @@ function handleLogout() {
 <template>
   <header
     class="h-16 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 flex items-center justify-between px-6">
-    <button @click="$emit('toggle-sidebar')" class="text-slate-400 hover:text-white md:hidden">
-      ☰
+    <button @click="$emit('toggle-sidebar')"
+      class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white md:hidden text-xl"> ☰
     </button>
 
     <div></div>

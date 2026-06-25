@@ -58,8 +58,7 @@ onMounted(() => {
 
     <p v-if="errorMessage" class="text-red-400 mt-4">{{ errorMessage }}</p>
 
-    <div v-if="isLoading" class="text-slate-400 mt-6">Loading dashboard...</div>
-
+<LoadingSpinner v-if="isLoading" label="Loading dashboard..." />
     <template v-else>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
         <StatCard title="Total Alerts" :value="totalAlerts" icon="🚨" accent="sky" />
@@ -76,8 +75,7 @@ onMounted(() => {
             <span class="text-slate-500">{{ new Date(alert.createdAt).toLocaleDateString() }}</span>
           </li>
         </ul>
-        <p v-if="recentAlerts.length === 0" class="text-slate-500 text-sm">No alerts yet.</p>
-      </div>
+ <EmptyState v-if="recentAlerts.length === 0" icon="✅" message="No alerts yet." />      </div>
     </template>
   </div>
 </template>

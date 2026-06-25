@@ -1,4 +1,8 @@
 <script setup>
+
+import PageHeader from '@/components/ui/PageHeader.vue'
+import LoadingSpinner from '@/components/ui/LoadingSpinner.vue'
+import EmptyState from '@/components/ui/EmptyState.vue'
 import { ref, computed, onMounted } from 'vue'
 import api from '@/api/axios'
 import AlertFilters from '@/components/alerts/AlertFilters.vue'
@@ -43,22 +47,19 @@ const filteredAlerts = computed(() => {
 </script>
 <template>
     <div>
-        <div class="flex items-center justify-between mb-6">
-            <h1 class="text-2xl font-bold text-white">Alerts</h1>
-            <span class="text-slate-400 text-sm">{{ filteredAlerts.length }} of {{ alerts.length }}</span>
-        </div>
+        <PageHeader title="Alerts">
+            <span class="text-slate-500 dark:text-slate-400 text-sm">{{ filteredAlerts.length }} of {{ alerts.length
+            }}</span>
+        </PageHeader>
 
         <AlertFilters v-model:severity="severityFilter" v-model:search="searchQuery" />
 
         <p v-if="errorMessage" class="text-red-400 mt-4">{{ errorMessage }}</p>
-        <div v-if="isLoading" class="text-slate-400 mt-6">Loading alerts...</div>
-
-        <ul v-else class="bg-slate-800 rounded-xl mt-6 px-4">
+        <LoadingSpinner v-if="isLoading" label="Loading alerts..." />
+        <ul v-else class="bg-white dark:bg-slate-800 rounded-xl mt-6 px-4 shadow-sm">
             <AlertListItem v-for="alert in filteredAlerts" :key="alert.id" :alert="alert" />
         </ul>
 
-        <p v-if="!isLoading && filteredAlerts.length === 0" class="text-slate-500 text-sm mt-4">
-            No alerts match your filters.
-        </p>
+        <EmptyState v-if="!isLoading && filteredAlerts.length === 0" icon="🔍" message="No alerts match your filters." />
     </div>
 </template>

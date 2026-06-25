@@ -1,9 +1,11 @@
-
 <script setup>
 import { ref, onMounted } from 'vue'
 import api from '@/api/axios'
 import DeviceTable from '@/components/devices/DeviceTable.vue'
 import DeviceFormModal from '@/components/devices/DeviceFormModal.vue'
+
+import PageHeader from '@/components/ui/PageHeader.vue'
+import LoadingSpinner from '@/components/ui/LoadingSpinner.vue'
 
 const devices = ref([])
 const isLoading = ref(true)
@@ -70,20 +72,18 @@ async function handleDelete(device) {
 
 <template>
   <div>
-    <div class="flex items-center justify-between mb-6">
-      <h1 class="text-2xl font-bold text-white">Devices</h1>
-      <button @click="openAddModal"
-        class="bg-emerald-500 hover:bg-emerald-600 text-white text-sm px-4 py-2 rounded-lg font-medium">
-        + Add Device
-      </button>
-    </div>
+    <PageHeader title="Devices">
+    <button @click="openAddModal"
+      class="bg-emerald-500 hover:bg-emerald-600 text-white text-sm px-4 py-2 rounded-lg font-medium">
+      + Add Device
+    </button>
+    </PageHeader>
 
     <p v-if="errorMessage" class="text-red-400 mb-4">{{ errorMessage }}</p>
-    <div v-if="isLoading" class="text-slate-400">Loading devices...</div>
+    <LoadingSpinner v-if="isLoading" label="Loading devices..." />
 
     <DeviceTable v-else :devices="devices" @edit="openEditModal" @delete="handleDelete" />
 
     <DeviceFormModal v-model="isModalOpen" :device="editingDevice" @save="handleSave" />
   </div>
 </template>
-
