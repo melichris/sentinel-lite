@@ -12,33 +12,19 @@
       "password": "brice123",
       "id": 2
     }
-  ],
-  "alerts": [
-    {
-      "id": 1,
-      "title": "Unauthorized login attempt",
-      "severity": "high",
-      "createdAt": "2026-06-20T10:00:00Z"
-    },
-    {
-      "id": 2,
-      "title": "Firewall rule updated",
-      "severity": "low",
-      "createdAt": "2026-06-21T08:30:00Z"
-    }
+  ],"alerts": [
+    { "id": 1, "title": "Unauthorized login attempt", "severity": "critical", "createdAt": "2026-06-20T10:00:00Z" },
+    { "id": 2, "title": "Firewall rule updated", "severity": "low", "createdAt": "2026-06-21T08:30:00Z" },
+    { "id": 3, "title": "Suspicious outbound traffic", "severity": "high", "createdAt": "2026-06-22T14:12:00Z" },
+    { "id": 4, "title": "Failed SSH login x5", "severity": "high", "createdAt": "2026-06-23T03:45:00Z" },
+    { "id": 5, "title": "SSL certificate expiring soon", "severity": "medium", "createdAt": "2026-06-23T09:00:00Z" },
+    { "id": 6, "title": "New device joined network", "severity": "low", "createdAt": "2026-06-24T11:20:00Z" }
   ],
   "devices": [
-    {
-      "id": 1,
-      "name": "Office Router",
-      "type": "router",
-      "status": "online"
-    },
-    {
-      "id": 2,
-      "name": "CCTV Cam 1",
-      "type": "camera",
-      "status": "offline"
-    }
+    { "id": 1, "name": "Office Router", "type": "router", "status": "online" },
+    { "id": 2, "name": "CCTV Cam 1", "type": "camera", "status": "offline" },
+    { "id": 3, "name": "CCTV Cam 2", "type": "camera", "status": "online" },
+    { "id": 4, "name": "Main Server", "type": "server", "status": "online" },
+    { "id": 5, "name": "Backup NAS", "type": "storage", "status": "offline" }
   ]
 }
