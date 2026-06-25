@@ -11,6 +11,18 @@
       "email": "brice@gmail.com",
       "password": "brice123",
       "id": 2
+    },
+    {
+      "name": "Test",
+      "email": "test@gmail.com",
+      "password": "test123",
+      "id": 3
+    },
+    {
+      "name": "melichris",
+      "email": "melichris@gmail.com",
+      "password": "melichris",
+      "id": 4
     }
   ],
   "alerts": [
