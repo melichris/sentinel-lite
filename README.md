@@ -39,7 +39,7 @@ npm run build
 # sentinel-lite
 ## 📸 Screenshots
 
-![Dashboard](./screenshots/dashbord.png)
 ![Login](./screenshots/login.png)
+![Dashboard](./screenshots/dashbord.png)
 ![Alerts](./screenshots/Alerts.png)
 
