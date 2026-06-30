@@ -1,23 +1,29 @@
-# sentinel-lite
+# Sentinel Lite
 
-This template should help get you started developing with Vue 3 in Vite.
+Sentinel Lite is a lightweight security dashboard that simulates monitoring of user access and system activity.
 
-## Recommended IDE Setup
+## 🚀 Features
+- Authentication (JWT-based)
+- Protected routes
+- Dashboard interface
+- API integration
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🛠 Tech Stack
+- Vue 3
+- Vue Router
+- Axios
+- Node.js (backend)
 
-## Recommended Browser Setup
+## 📸 Screenshots
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+![Login](./screenshots/login.png)
+![Dashboard](./screenshots/dashbord.png)
+![Alerts](./screenshots/Alerts.png)
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## ⚙️ Setup
+npm install
+npm run dev
 
 ## Project Setup
 
@@ -37,9 +43,5 @@ npm run dev
 npm run build
 ```
 # sentinel-lite
-## 📸 Screenshots
 
-![Login](./screenshots/login.png)
-![Dashboard](./screenshots/dashbord.png)
-![Alerts](./screenshots/Alerts.png)
 
